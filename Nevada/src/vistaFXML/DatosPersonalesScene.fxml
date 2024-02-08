@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane id="anchorContenido" prefWidth="1003.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modeloController.DatosPersonalesSceneController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints prefHeight="35.0" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints vgrow="SOMETIMES" />
+      <RowConstraints vgrow="SOMETIMES" />
+      <RowConstraints vgrow="SOMETIMES" />
+      <RowConstraints vgrow="ALWAYS" />
+      <RowConstraints prefHeight="56.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <HBox GridPane.hgrow="ALWAYS" GridPane.vgrow="NEVER">
+         <children>
+            <Label alignment="TOP_LEFT" styleClass="tituloContenido" text="Clientes" HBox.hgrow="ALWAYS">
+               <stylesheets>
+                  <URL value="@../Style/MainMenu.css" />
+                  <URL value="@../Style/empleadorStyle.css" />
+               </stylesheets>
+            </Label>
+         </children>
+      </HBox>
+      <HBox spacing="20.0" styleClass="panelEnfasis" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+         <children>
+            <VBox alignment="CENTER" prefHeight="64.0" prefWidth="0.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="subTitulo" text="Filtrar Por:" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="64.0" prefWidth="229.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="24.0" prefWidth="202.0" styleClass="textPeriodo" text="No. Documento" />
+                  <TextField fx:id="txtBuscarDocumento" prefHeight="20.0" prefWidth="68.0" styleClass="textCampo" />
+               </children>
+            </VBox>
+            <VBox prefHeight="64.0" prefWidth="255.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="24.0" prefWidth="118.0" styleClass="textPeriodo" text="Nombres" />
+                  <TextField fx:id="txtFiltrarNombre" prefHeight="20.0" prefWidth="68.0" styleClass="textCampo" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER">
+               <children>
+                  <Button fx:id="btnLimpiarCampo" mnemonicParsing="false" onAction="#limpiarCampoFiltro" styleClass="boton" text="Ver todo" />
+               </children>
+            </VBox>
+         </children>
+         <GridPane.margin>
+            <Insets top="10.0" />
+         </GridPane.margin>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="929.0" spacing="10.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+         <children>
+            <Label prefHeight="26.0" prefWidth="114.0" styleClass="nuevoLabel" text="ACCIONES" />
+            <Button alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#registrarCliente" prefHeight="23.0" prefWidth="27.0" styleClass="botonNuevo">
+               <tooltip>
+                  <Tooltip styleClass="tooltip-acciones" text="Agregar Cliente" />
+               </tooltip>
+            </Button>
+            <Button alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#editarCliente" styleClass="editarBoton">
+               <tooltip>
+                  <Tooltip styleClass="tooltip-acciones" text="Editar Cliente" />
+               </tooltip>
+            </Button>
+            <Button alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#eliminarCliente" styleClass="eliminarBoton">
+               <tooltip>
+                  <Tooltip styleClass="tooltip-acciones" text="Eliminar Cliente" />
+               </tooltip>
+            </Button>
+         </children>
+         <GridPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </GridPane.margin>
+      </HBox>
+      <TableView fx:id="tablaUsuario" editable="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+         <columns>
+            <TableColumn fx:id="colId" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" styleClass="encabezadoTabla" text="ID" />
+            <TableColumn fx:id="colTipoDocumento" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="130.0" styleClass="encabezadoTabla" text="TIPO D" />
+            <TableColumn fx:id="colNombre" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="270.0" styleClass="encabezadoTabla" text="NOMBRE" />
+            <TableColumn fx:id="colDireccion" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="270.0" styleClass="encabezadoTabla" text="DIRECCION" />
+            <TableColumn fx:id="colTelefono" editable="false" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" styleClass="encabezadoTabla" text="TELEFONO" />
+         </columns>
+      </TableView>
+   </children>
+   <stylesheets>
+      <URL value="@../Style/MainMenu.css" />
+      <URL value="@../Style/usuario.css" />
+   </stylesheets>
+</GridPane>
