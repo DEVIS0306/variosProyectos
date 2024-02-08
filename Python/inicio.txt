@@ -1,0 +1,18 @@
+Platform.runLater(() -> {
+    int column = ...; // La columna en la que deseas agregar imageView
+    int row = ...; // La fila en la que deseas agregar imageView
+    tablePokemon.add(imageView, column, row);
+});
+
+
+Paquete: PR_INT_SERWE
+Procedimiento: LISTREPCOMPRET,
+esta en el user de la bd de ficohsa,
+necesito el porcentage de la retencion 1% y 12.5%
+tambien un campo llamado status, que es el que indica si esta anulada o no
+
+Image image = new Image(pokemon.getImagenUrl())
+demo/target/classes/pokedex/*.class
+demo/target/classes/login/*.class
+demo/target/classes/modeloDTO/*.class
+demo/target/classes/otros/*.class
