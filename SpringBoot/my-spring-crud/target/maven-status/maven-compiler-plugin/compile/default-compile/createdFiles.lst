@@ -1,0 +1,4 @@
+com\example\myspringcrud\MySpringCrudApplication.class
+com\example\myspringcrud\model\Persona.class
+com\example\myspringcrud\repository\PersonaRepository.class
+com\example\myspringcrud\controller\PersonaController.class

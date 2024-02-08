@@ -1,0 +1,87 @@
+/* index.css */
+
+/* Estilo para el encabezado */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el enlace "Agregar Persona" */
+a {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para las celdas de la tabla */
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para las celdas del encabezado de la tabla */
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para las filas impares de la tabla */
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para las acciones (Editar y Eliminar) */
+td a {
+    margin-right: 5px;
+    color:  #f2f2f2;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 5px;
+    border: 1px solid #007bff;
+    border-radius: 3px;
+}
+
+/* Cambiar color al pasar el cursor sobre los enlaces */
+td a:hover {
+    color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Alinear contenido de las celdas de la tabla */
+td {
+    vertical-align: middle;
+}
+
+/* Estilo responsive para la tabla */
+@media (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    td a {
+        padding: 1px 3px;
+        font-size: 10px;
+    }
+}
+
+

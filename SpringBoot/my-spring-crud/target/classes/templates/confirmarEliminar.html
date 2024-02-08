@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Confirmación de Eliminación</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/confirmarEliminar.css}" />
+</head>
+<body>
+    <h1>Confirmación de Eliminación</h1>
+    <p>¿Estás seguro de querer eliminar a la persona:</p>
+    <p>Nombre: <span th:text="${persona.nombre}"></span></p>
+    <p>Apellido: <span th:text="${persona.apellido}"></span></p>
+    <form th:action="@{/eliminar/{id}(id=${persona.id})}" method="post">
+        <input type="submit" value="Eliminar" />
+        <a th:href="@{/}">Cancelar</a>
+    </form>
+</body>
+</html>
