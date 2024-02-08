@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="panelFormSignIn" alignment="CENTER" prefHeight="411.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modeloController.LoginFormController">
+   <children>
+      <Label text="Iniciar Sesión">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+      <VBox>
+         <VBox.margin>
+            <Insets left="50.0" right="50.0" />
+         </VBox.margin>
+         <children>
+            <Label text="Usuario">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER">
+               <children>
+                  <Pane prefHeight="29.0" prefWidth="40.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="46.0" layoutX="2.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/LogoUsuario.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="3.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <TextField fx:id="txtUserSignIn" maxWidth="1.7976931348623157E308" onKeyTyped="#eventKey" prefWidth="284.0" promptText="Ej. devis@hotmail.com" styleClass="textCampo" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="1.0" />
+               </VBox.margin>
+            </HBox>
+            <Label text="Contraseña">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox VBox.vgrow="ALWAYS">
+               <children>
+                  <Pane prefHeight="30.0" prefWidth="43.0">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="9.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/LogoContrasenia.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <StackPane HBox.hgrow="ALWAYS">
+                     <children>
+                        <PasswordField fx:id="txtPasswordSignIn" onKeyTyped="#eventKey" promptText="Ej. *********" styleClass="textCampo">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                        <TextField fx:id="txtPasswordSignInMask" onKeyTyped="#eventKey" promptText="Ej. 123456789" styleClass="textCampo">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </StackPane>
+                  <Button fx:id="btnVerContrasenia" mnemonicParsing="false" onMouseClicked="#verContrasenia">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/OcultarContrasenia.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="transparent" />
+                        <String fx:value="botonContrasenia" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="21.0" prefWidth="382.0">
+               <children>
+                  <Label fx:id="lblMensaje" contentDisplay="CENTER" prefHeight="17.0" prefWidth="343.0" textAlignment="JUSTIFY" textFill="#0c22f7">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font></Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="btnSignIn" mnemonicParsing="false" onMouseClicked="#iniciarSesion" prefHeight="35.0" prefWidth="100.0" text="Ingresar" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="boton" />
+                        <String fx:value="botonSecundario" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../../Stylecss/Main.css" />
+      <URL value="@../Style/Main.css" />
+   </stylesheets>
+</VBox>

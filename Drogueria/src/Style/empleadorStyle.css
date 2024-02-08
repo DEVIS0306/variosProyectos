@@ -1,0 +1,30 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.panelPeriodo{
+    -fx-background-color: #F1F1F1;
+    -fx-background-radius: 9;
+    -fx-padding: 13px 16px;
+}
+
+.textPeriodo{
+    -fx-text-fill: #6D7278;
+    -fx-font: 12px Arial;
+    -fx-padding: 0 12px 0 0;
+}
+
+.panelImpar{
+    -fx-background-color: #F1F1F1;
+    -fx-background-radius: 9;
+    -fx-padding: 12px 17px 12px 17px;
+}
+
+.panelPar{
+    -fx-padding: 10px 0 40px 0;
+}
+
+
+
+
+

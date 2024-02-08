@@ -1,0 +1,113 @@
+.botonContrasenia{
+   -fx-cursor: hand;
+}
+
+.boton {
+    -fx-text-fill: #6D7278;
+    -fx-background-radius: 24.42;
+    -fx-font: 14px Arial;
+    -fx-text-align: center;
+    -fx-padding: 10px 10px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.botonPrimario {
+    -fx-background-color: #5DADE2;
+    -fx-text-fill: #FFFFFF;
+}
+
+.botonPrimario:hover {
+    -fx-background-color: #E6B0AA;
+}
+
+.botonSecundario {
+    -fx-background-color: #DEDFE1;
+}
+
+.botonSecundario:hover {
+    -fx-background-color: #AED6F1;
+}
+
+.botonSalir {
+    -fx-background-color: transparent;
+    -fx-text-fill: #404143;
+    -fx-font: 18px Arial;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+
+}
+
+.campoRadio .radio {
+    -fx-border-color: #adb5bd;
+    -fx-border-radius: 15px;
+    -fx-background-color: transparent;
+}
+
+.campoRadio:selected .radio {
+    -fx-border-color: #0575FF;
+}
+
+.campoRadio:selected .radio .dot {
+    -fx-background-radius: 15px;
+    -fx-mark-color: #0575FF;
+    -fx-mark-highlight-color: transparent;
+}
+
+.campoCheck .box {
+    -fx-background-color: white;
+    -fx-border-color: #adb5bd;
+    -fx-border-radius: 3px;
+}
+
+.campoCheck:selected .mark {
+    -fx-background-color: white;
+}
+
+.campoCheck:selected .box {
+    -fx-background-color: #0575FF;
+    -fx-border-color: #0575FF;
+}
+
+.campoCheck:disabled:selected .box {
+    -fx-background-color: #ADAEAF;
+    -fx-border-color: #ADAEAF;
+}
+
+.comboCampo .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #757575;
+    -fx-font: 12px Arial;
+}
+
+.textCampo {
+    -fx-border-color: #98a3aa;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-text-fill: #737476;
+    -fx-font: 12px Arial;
+}
+
+.textCampo:disabled, .textCampo:disabled > * {
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-background-border-color: #979797;
+    -fx-background-color: #e9ecef;
+    -fx-background-radius: 8;
+    -fx-text-fill: #737476;
+    -fx-opacity: 1.0;
+}
+
+.transparent{
+ -fx-background-color: rgba(0,0,0,0);
+}
+
+.imagenlogo{
+    -fx-background-image: url("../img/logoDelMain.jpg");
+    -fx-background-size: cover;
+}
+
+.fondoLogo{
+    -fx-background-color: #5DADE2;
+    -fx-text-fill: #FFFFFF;
+}

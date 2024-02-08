@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="gridPrincipal" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../Style/MainMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modeloController.MainMenuController">
+  <columnConstraints>
+      <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="-Infinity" prefWidth="280.0" />
+    <ColumnConstraints hgrow="ALWAYS" prefWidth="1130.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" prefHeight="768.0" prefWidth="234.0" style="-fx-background-color: #FBFCFF;" styleClass="panelMenu" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="57.0" fitWidth="88.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets top="57.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../iconos/iconoDasboard.png" />
+               </image>
+            </ImageView>
+            <TreeView fx:id="verticalMenu" onContextMenuRequested="#leerMenu" onMouseClicked="#leerMenu" prefHeight="603.0" prefWidth="232.0" styleClass="treeMenu" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets top="57.0" />
+               </VBox.margin>
+            </TreeView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+         <padding>
+            <Insets right="2.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="788.0" spacing="5.0">
+               <children>
+                  <HBox prefHeight="60.0" prefWidth="138.0" HBox.hgrow="NEVER">
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" prefHeight="68.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="botonSalir" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#salir" prefHeight="40.0" prefWidth="136.0" text="SALIR" textAlignment="JUSTIFY">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="icoSalir">
+                                 <cursor>
+                                   <!-- <Cursor fx:constant="HAND" />-->
+                                 </cursor>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Cambria Bold" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="25.0" right="25.0" top="32.0" />
+               </padding>
+            </HBox>
+            <GridPane fx:id="gridPane" VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets bottom="25.0" left="37.0" right="37.0" />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
