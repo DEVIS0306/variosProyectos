@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CRUD de Personas</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
+</head>
+<body>
+    <h1>CRUD de Personas</h1>
+    <a th:href="@{/crear}">Agregar Persona</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Cedula</th>
+            <th>Edad</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Acciones</th>
+        </tr>
+        <tr th:each="persona, iterStat : ${personas}">
+            <td th:text="${iterStat.index + 1}"></td>
+            <td th:text="${persona.nombre}"></td>
+            <td th:text="${persona.apellido}"></td>
+            <td th:text="${persona.cedula}"></td>
+            <td th:text="${persona.edad}"></td>
+            <td th:text="${persona.direccion}"></td>
+            <td th:text="${persona.telefono}"></td>
+            <td>
+                <a th:href="@{/editar/{id}(id=${persona.id})}">Editar</a>
+                <a th:href="@{/eliminar/{id}(id=${persona.id})}" onclick="confirmarEliminacion(${persona.id})">Eliminar</a>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" th:src="@{/js/scripts.js}"></script>
+</body>
+</html>
+
